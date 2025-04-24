@@ -16,7 +16,10 @@ public class Menu {
 
         String choice = scanner.nextLine();
 
-        if (Objects.equals(choice, "1")) {}
+        if (Objects.equals(choice, "1")) {
+
+            Account.loadAccFromDB();
+        }
 
         else if (Objects.equals(choice, "2")) {
 
