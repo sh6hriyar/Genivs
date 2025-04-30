@@ -38,9 +38,6 @@ public class Account implements Serializable {
         try {
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("accObj.dat"));
             DB.accounts = (List<Account>) in.readObject();
-            for (Account acc : DB.accounts) {
-                System.out.println(acc);
-            }
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -54,6 +51,13 @@ public class Account implements Serializable {
                 ", username='" + username + '\'' +
                 ", role=" + role +
                 '}';
+    }
+
+    public String getUsername() {
+        return username;
+    }
+    public String getPassword() {
+        return password;
     }
 
 
