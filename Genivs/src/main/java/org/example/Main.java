@@ -14,6 +14,8 @@ public class Main {
         Menu.menu(scanner);
 
 
+        DB.saveAccounts();
+        DB.saveSongs();
     }
 
 

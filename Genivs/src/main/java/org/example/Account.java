@@ -14,6 +14,8 @@ public class Account implements Serializable {
     private String email;
     private String password;
     private String role;
+    public List<String> favoriteSongs;
+    public List<String> followingArtists;
 
     public Account(String name, String username, String email, String password, String role) {
         this.name = name;
@@ -21,6 +23,8 @@ public class Account implements Serializable {
         this.email = email;
         this.password = password;
         this.role = role;
+        this.favoriteSongs = new ArrayList<>();
+        this.followingArtists = new ArrayList<>();
     }
     public static void saveAccToDB(Account obj){
 

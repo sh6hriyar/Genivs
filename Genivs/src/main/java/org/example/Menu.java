@@ -29,6 +29,8 @@ public class Menu {
                     ArtistHome.show(currentAcc, scanner);
                 } else if (currentAcc.getRole().equals("member")) {
 
+                    MemberHome.show(currentAcc, scanner);
+
 
 
 
