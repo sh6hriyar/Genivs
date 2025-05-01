@@ -13,7 +13,9 @@ public class Menu {
 
 
         while (true){
+            System.out.println("**************");
             System.out.println("****GENIVS****");
+            System.out.println("**************");
             System.out.println("                            ");
             System.out.println("  1. Login");
             System.out.println("  2. Register");
@@ -23,7 +25,16 @@ public class Menu {
             if (Objects.equals(choice, "1")) {
 
                 Account currentAcc = Login.login(scanner);
-                ArtistHome.show(currentAcc, scanner);
+                if (currentAcc.getRole().equals("artist")) {
+                    ArtistHome.show(currentAcc, scanner);
+                } else if (currentAcc.getRole().equals("member")) {
+
+
+
+
+
+
+                }
 
 
             }
@@ -34,7 +45,9 @@ public class Menu {
 
             }
 
-            else if (Objects.equals(choice, "3")) {}
+            else if (Objects.equals(choice, "3")) {
+                break;
+            }
         }
 
 
