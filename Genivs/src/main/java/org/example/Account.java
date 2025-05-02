@@ -66,6 +66,9 @@ public class Account implements Serializable {
     public String getRole() {
         return role;
     }
+    public String getName() {
+        return name;
+    }
 
 
 

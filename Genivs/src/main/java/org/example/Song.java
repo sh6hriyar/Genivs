@@ -147,7 +147,7 @@ public class Song implements Serializable {
     }
 
 
-     private static void showLyrics(String title, Scanner scanner) {
+     public static void showLyrics(String title, Scanner scanner) {
         for (Song song : DB.songs) {
             if (song.title.equals(title)) {
                 System.out.println(song.title + " By " + song.artist);
@@ -160,7 +160,7 @@ public class Song implements Serializable {
         }
     }
 
-    private static boolean checkTitleToShowLyrics(String title) {
+    public static boolean checkTitleToShowLyrics(String title) {
         for (Song song : DB.songs) {
             if (song.title.equals(title)) {
                 return true;
@@ -169,7 +169,7 @@ public class Song implements Serializable {
         return false;
     }
 
-    private static void addOrRemoveSongToFavoriteSongs(Scanner scanner, Account currentAcc, String title) {
+    public static void addOrRemoveSongToFavoriteSongs(Scanner scanner, Account currentAcc, String title) {
 
         if (currentAcc.favoriteSongs.contains(title)) {
             System.out.print("remove song song from favorite song list?(enter 1 to agree) ");
@@ -227,7 +227,16 @@ public class Song implements Serializable {
 
 
 
+    public String getArtist(){
+        return artist;
+    }
+    public String getTitle(){
+        return title;
+    }
 
+    public String getGenre(){
+        return genre;
+    }
 
 
 

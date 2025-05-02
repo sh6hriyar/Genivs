@@ -19,8 +19,8 @@ public class MemberHome {
             System.out.println("1-Browse musics");
             System.out.println("2-Browse artists");
             System.out.println("3-Favorite songs");
-            System.out.println("3-Following artists");
-            System.out.println("4-Logout");
+            System.out.println("4-Following artists");
+            System.out.println("5-Logout");
             String option = scanner.nextLine();
 
 
@@ -29,7 +29,11 @@ public class MemberHome {
             }
 
 
-            else if (option.equals("2")) {}
+            else if (option.equals("2")) {
+
+                Artist.browseArtist(scanner, currentAcc);
+
+            }
 
 
             else if (option.equals("3")) {
@@ -38,6 +42,17 @@ public class MemberHome {
 
 
             else if (option.equals("4")) {
+
+                Artist.browseArtist(scanner, currentAcc);
+
+
+            }
+
+
+
+
+
+            else if (option.equals("5")) {
                 break;
             }
 
